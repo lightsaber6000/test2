@@ -157,8 +157,13 @@ table.product-table
             toTriades(...args) {
                 return toTriades(...args)
             },
+            resetChecks() {
+                this.check_all = false
+                this.mix_all = false
+            },
             updateCheckAll(val) {
                 this.check_all = val
+                this.mix_all = false
                 if (val) {
                     this.check_arr = this.check_arr.map((el) => ({ ...el, val: true }))
                     return

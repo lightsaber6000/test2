@@ -23,7 +23,7 @@ LoaderComponent(v-if='!is_ready')
                 a.product-list-add__link(href='#', rel='noopener noreferrer', target='_blank') 119203059,
                 a.product-list-add__link(href='#', rel='noopener noreferrer', target='_blank') 124366343,
                 a.product-list-add__link(href='#', rel='noopener noreferrer', target='_blank') 59801844,
-        ProductTableComponent(:list='list', :in_process='in_process')
+        ProductTableComponent(:list='list', :in_process='in_process', ref='tableComponent')
         PaginationComponent.product-list__pagination(
             :in_process='in_process',
             :current_page='pagination.page',
@@ -95,6 +95,7 @@ LoaderComponent(v-if='!is_ready')
             async changePage(page) {
                 const { results } = await this.getList(page)
                 this.list = results
+                this.$refs.tableComponent.resetChecks();
             },
         },
     }
