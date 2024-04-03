@@ -1,0 +1,55 @@
+@mixin buttonStyle($bgColor, $borderColor, $textColor)
+  background-color: $bgColor
+  border-color: $borderColor
+  color: $textColor
+
+.button
+  font-size: 15px
+  line-height: 15px
+  font-weight: 600
+  padding: 16px 30px 17px 30px
+  box-shadow: none
+  border-width: 1px
+  border-style: solid
+  border-radius: 6px
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition)
+  &--in-process
+    cursor: wait
+  @include buttonStyle(var(--green), var(--green), var(--white))
+  @media (hover: hover)
+    &:hover:not(:disabled)
+      @include buttonStyle(var(--green-hover), var(--green-hover), var(--white))
+      cursor: pointer
+  &:disabled
+    @include buttonStyle(var(--button-gray), var(--button-gray), var(--gray-1))
+    cursor: not-allowed
+  &:active:not(:disabled)
+    @include buttonStyle(var(--green-active), var(--green-active), var(--white))
+    cursor: pointer
+  &--gray
+    @include buttonStyle(var(--button-gray), var(--button-gray), var(--dark-blue))
+    @media (hover: hover)
+      &:hover:not(:disabled)
+        @include buttonStyle(var(--button-gray-hover), var(--button-gray-hover), var(--dark-blue))
+    &:active:not(:disabled)
+      @include buttonStyle(var(--button-gray-active), var(--button-gray-active), var(--dark-blue))
+  &--icon
+    width: 25px
+    height: 25px
+    border-color: transparent
+    background-color: transparent
+    padding: 0
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    font-size: 0
+    line-height: 0
+    color: var(--gray)
+    @media (hover: hover)
+      &:hover:not(:disabled)
+        @include buttonStyle(transparent, transparent, var(--dark-blue))
+    &:disabled
+      @include buttonStyle(transparent, transparent, var(--gray-1))
+      cursor: not-allowed
+    &:active:not(:disabled)
+      @include buttonStyle(transparent, transparent, var(--dark-blue-2))

@@ -1,0 +1,49 @@
+*
+  box-sizing: border-box
+
+html,
+body
+  font-family: var(--font-base)
+  background-color: var(--concrete)
+  color: var(--black)
+
+b,
+strong
+  font-weight: 600
+  font-family: var(--font-base)
+
+.container
+  width: 100%
+  margin: 0 auto
+  padding: 40px 40px 60px 40px
+  border-radius: 15px
+  background-color: var(--white)
+  box-shadow: 0 6px 8px 0  rgba(var(--black-rgb), 0.5)
+
+.empty-container
+  width: 100%
+  margin: 0 auto
+  padding: 0 40px
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  overflow: hidden
+  white-space: nowrap
+  border: 0
+  clip: rect(0, 0, 0, 0)
+  clip-path: inset(50%)
+  &:not(:focus, :active)
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    padding: 0
+    overflow: hidden
+    white-space: nowrap
+    border: 0
+    clip: rect(0 0 0 0)
+    clip-path: inset(100%)

@@ -1,0 +1,35 @@
+@function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+    --white: #fff;
+    --green: #2ed2ba;
+    --link-hover: #20ebcd;
+    --green-hover: #2cc7b1;
+    --green-active: #29bda8;
+    --concrete: #f2f2f2;
+    --dark-blue: #132639;
+    --dark-blue-2: #122436;
+    --button-gray: #f2f1f3;
+    --button-gray-hover: #e6e5e7;
+    --button-gray-active: #dad9db;
+    --gray: #999999;
+    --gray-dark: #666666;
+    --gray-1: #cececf;
+    --gray-2: #cccccc;
+    --gray-3: #e6e6e6;
+    --gray-4: #919191;
+    --gray-5: #8a8a8a;
+    --gray-6: #dee0e3;
+    --black: #000000;
+    --black-rgb: #{hexToRGB(#000000)};
+    --red: #ff1e1e;
+    --red-rgb: #{hexToRGB(#ff1e1e)};
+    --social-tg: #2aabee; // telegram
+    --social-tg-active: #269ad7;
+    --social-wp: #25d366; // whatsapp
+    --social-wp-active: #21be5c;
+    --font-base: 'GraphikLCG', sans-serif;
+    --transition: 0.2s ease-in;
+}

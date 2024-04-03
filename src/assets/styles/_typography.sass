@@ -1,0 +1,41 @@
+.title-1,
+.title-2,
+.title-3
+  line-height: 1em
+
+.title-1
+  font-size: 42px
+  line-height: 42px
+  font-weight: 600
+
+.title-2
+  font-size: 28px
+  font-weight: 600
+
+.title-3
+  font-size: 26px
+
+.text
+  font-size: 15px
+  line-height: 25px
+  &--gray
+    color: var(--gray)
+
+.link
+  font-size: 15px
+  line-height: 25px
+  color: var(--green)
+  transition: color var(--transition)
+  &--gray
+    color: var(--dark-blue)
+  &__icon
+    width: 25px
+    height: 25px
+  @media (hover: hover)
+    &:hover
+      color: var(--green-hover)
+
+.caption
+  font-size: 12px
+  line-height: 16px
+  color: var(--gray)
