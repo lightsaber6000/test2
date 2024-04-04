@@ -6,7 +6,7 @@
         v-html='field_options_internal.title'
     )
     .field__inner
-        .field__input-wrapper(:class='{ "js-field-wrapper-error": show_error }')
+        .field__input-wrapper
             input.input(
                 :class='{ "js-input-error": show_error, "input--small": small, "input--icon": field_options_internal.toggle_visibility_button }',
                 v-imask='mask',
@@ -35,7 +35,7 @@
 
 <script>
     import { useUniqueId } from '@/assets/js/uid'
-    import { IMaskDirective, IMask } from 'vue-imask'
+    import { IMaskDirective } from 'vue-imask'
     import validate from '@/components/common/field-input/utils/validate'
 
     import SvgIconComponent from '@/components/common/SvgIconComponent.vue'

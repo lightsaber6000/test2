@@ -86,9 +86,8 @@
                 const is_valid = this.$refs.formComponent.validate()
                 if (!is_valid) {
                     this.$nextTick(() => {
-                        const field_wrapper = document.querySelector('.js-field-wrapper-error')
                         const input = document.querySelector('.js-input-error')
-                        if (!field_wrapper || !input) return
+                        if (!input) return
                         input.focus()
                     })
                     return
